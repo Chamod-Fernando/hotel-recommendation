@@ -1,0 +1,71 @@
+.search-container {
+    background-color: #003580;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .search-bar {
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .search-input, .date-picker, .guest-selector {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .search-btn {
+    background-color: #0071c2;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .hotel-list {
+    padding: 20px;
+  }
+  
+  .hotel-card {
+    display: flex;
+    background: #f8f8f8;
+    padding: 10px;
+    border-radius: 10px;
+    align-items: center;
+    gap: 15px;
+    max-width: 400px;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .hotel-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .hotel-card img {
+    width: 100px;
+    border-radius: 5px;
+  }
+  
+  .hotel-details h3 {
+    margin: 0;
+  }
+  
+  .rating {
+    /* font-weight: ; */
+    color: #0071c2;
+    font-size: small;
+  }
+  
+  .star {
+    color: gold;
+    font-size: 18px;
+  }

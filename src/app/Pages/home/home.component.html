@@ -1,0 +1,47 @@
+<nav class="navbar">
+  <div class="logo">
+    <a routerLink="/home">
+      <img src="/images/logo.png" alt="Hotel Finder Logo" />
+      NEST Hotel Finder
+    </a>
+  </div>
+  <ul class="nav-links">
+    <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
+    <li><a routerLink="/login" routerLinkActive="active">Login</a></li>
+    <li><a routerLink="/register" routerLinkActive="active">Register</a></li>
+  </ul>
+</nav>
+
+<div class="container">
+  <div class="header">
+    <h1>Find Your Perfect Stay</h1>
+    <p>
+      Best Price | Dream Location | Perfect Stay | Nice Hospitality | Safety
+    </p>
+  </div>
+
+  <div class="image-slider">
+    <div class="slide-track">
+      <img src="images/img1.jpg" alt="Hotel Image" />
+      <img src="images/img2.jpg" alt="Hotel Image" />
+      <img src="images/img3.jpg" alt="Hotel Image" />
+      <img src="images/img4.jpg" alt="Hotel Image" />
+      <img src="images/img5.jpg" alt="Hotel Image" />
+    </div>
+  </div>
+
+  <div class="info-box">
+    <p>
+      Discover hotels tailored to your unique travel needs with our AI-powered
+      recommendations.
+    </p>
+    <div class="buttons">
+      <div class="home-container">
+        <button class="explore-btn" (click)="navigateToHotels()">Explore Hotels</button>
+      </div>
+      <button class="chat-btn" (click)="navigateToChat()">Chat with AI</button>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

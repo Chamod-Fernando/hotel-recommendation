@@ -1,0 +1,28 @@
+<div class="chatbot-container">
+  <div class="chat-header">
+    <img src="images/Monica.png" alt="Chat Icon" class="chat-icon" />
+    <h3>AI Chatbot</h3>
+    <button class="close-btn" (click)="closeChat()">✖</button>
+  </div>
+
+  <div class="chat-body">
+    <div
+      *ngFor="let msg of messages"
+      [ngClass]="{ user: msg.sender === 'user', bot: msg.sender === 'bot' }"
+    >
+      {{ msg.text }}
+    </div>
+
+    <div *ngIf="isLoading" class="bot">Typing...</div>
+  </div>
+
+  <div class="chat-footer">
+    <input
+      type="text"
+      [(ngModel)]="userMessage"
+      (keyup.enter)="sendMessage()"
+      placeholder="Type your message..."
+    />
+    <button (click)="sendMessage()">Send</button>
+  </div>
+</div>
