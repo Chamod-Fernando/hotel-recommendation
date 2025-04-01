@@ -1,14 +1,30 @@
 /* Centering the registration box */
 .register-container {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   background: url("/images/img3.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
+/* Adding a semi-transparent overlay */
+.register-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Adjust opacity (0.0 to 1.0) */
+}
+
+/* Ensuring the register box is above the overlay */
 .register-box {
-  background: rgba(255, 255, 255, 0.548);
+  position: relative;
+  background: rgba(255, 255, 255, 0.5); /* Adjust opacity if needed */
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -16,6 +32,7 @@
   width: 100%;
   max-width: 350px;
 }
+
 
 h2 {
   margin-bottom: 1rem;
